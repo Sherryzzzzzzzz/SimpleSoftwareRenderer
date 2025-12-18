@@ -7,10 +7,11 @@
 > **A lightweight, programmable 3D software rasterizer written in C++ from scratch.**  
 > 一个完全基于 CPU、不依赖图形 API (OpenGL/DirectX) 的 3D 软渲染引擎。
 
-![Demo Screenshot](docs/demo.gif) 
-*(⚠️请在这里替换一张你的泉此方渲染动图或截图，例如 screenshots/demo.png)*
+
 
 ## 📖 简介 (Introduction)
+
+![PixPin_2025-12-18_14-03-20](PixPin_2025-12-18_14-03-20.gif)
 
 本项目是一个为了深入理解计算机图形学渲染管线（Graphics Pipeline）而编写的**软渲染器**。
 核心逻辑（从顶点处理、光栅化到片段着色）完全由 C++ 手写实现，仅使用 OpenCV 进行最终的 FrameBuffer 显示和纹理读取。
