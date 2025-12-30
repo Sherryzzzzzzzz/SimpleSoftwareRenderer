@@ -3,6 +3,7 @@
 #include <Eigen/Dense>
 #include <vector>
 #include <cmath>
+#include "Skybox.h" 
 
 using namespace cv;
 using namespace Eigen;
@@ -13,7 +14,7 @@ public:
     Renderer(int w, int h);
     ~Renderer();
 
-    void clear();
+    void clear(Skybox& skybox, const Vector3f& camera_pos, const Vector3f& camera_target);
 
     // 画线
     void draw_line(Vector2i p0, Vector2i p1, Vector3i color);
@@ -25,6 +26,7 @@ public:
     void rasterize_triangle_test(Vector2i v0, Vector2i v1, Vector2i v2);
 
     Mat& get_frame_buffer();
+	const std::vector<float>& get_z_buffer() const { return z_buffer; }
     void rasterize_triangle(Vector3f v0, Vector3f v1, Vector3f v2,
         Vector2f uv0, Vector2f uv1, Vector2f uv2,
         Vector3f n0, Vector3f n1, Vector3f n2,
